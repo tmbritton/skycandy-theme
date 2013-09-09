@@ -1,0 +1,55 @@
+body.home {
+	h2 {
+		font-size:1.4em;
+	}
+	.home-page-pods {
+		@extend .clearfix;
+		.pod {
+			@extend .clearfix;
+			list-style-type: none;
+			margin-bottom: 1em;
+			img {
+				float:left;
+				margin-right: 10px;
+			}
+			h2 {
+				margin: 0 0 .5em 110px;
+			}
+			p {
+				margin: 0 0 0 110px
+			}
+		}
+		li:nth-of-type(odd){
+			@include breakpoint($search-break){
+				@include grid-span(2, 1);
+				clear:both;
+			}
+		}
+		li:nth-of-type(even){
+			@include breakpoint($search-break){
+				@include grid-span(2, 3);
+			}
+		}
+	}
+	.sidebar {
+		h2 {
+			margin: 0 0 1em 0;
+		}
+		.latest-blog-posts {
+			li {
+				list-style-type:none;
+				margin: 0 0 1em 0;
+				position:relative;
+				img {
+					float:left;
+					margin-right: 10px;
+				}
+			}
+		}
+		.class-descriptions {
+			li {
+				margin: 0;
+			}
+		}
+	}
+}
